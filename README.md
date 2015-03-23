@@ -1,2 +1,3 @@
 # programas-arduino
-Este es un primer programa de manejo con arduino, copia y paga el código en tu aplicación ardunio
+
+Esta es una serie de programas desarrollados para arduino mega 2060, copia y paga el código en tu aplicación arduino, deacuerdo a las necesidades de codigo que tengas.
