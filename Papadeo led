@@ -10,10 +10,10 @@ void setup() { //Configura tus pines I/O inicialmente en esta funcion
 }
 
 void loop() {
-  //Esta funcion repite el codigo que coloques en esta seccion, es equivalente a un bucle infinido en microcontroladores (while(1))
+  //Esta funcion repite el codigo que coloques en esta seccion, es equivalente a un bucle infinido en microcontroladores (while   //(1))
   digitalWrite(13, HIGH); //Coloca el pin 13 en 1 (Encendido)
-  delay(100); //Delay de 1000ms o 1 segundo.
+  delay(1000); //Delay de 1000ms o 1 segundo.
   digitalWrite(13,LOW); //Coloca el pin 13 en 0 apagado.
-  delay(100); //Otro retraso de 1 segundo
+  delay(1000); //Otro retraso de 1 segundo
 
 }
