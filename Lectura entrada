@@ -1,0 +1,22 @@
+//Este codigo permite identificar los estados logicos sobre una determinada entrada.
+
+
+int Valorleido=0; //Valor leido del pin equivalente al estado logico (0 o 1).
+
+void setup() {//Configuracion inicial
+ pinMode(10, INPUT); //Pin de lectura sobre la tarjeta arduino mega 2560.
+ pinMode(13, OUTPUT); // Pin de salida sobre la tarjeta arduino mega 2560.
+
+}
+
+void loop() {
+  Valorleido=digitalRead(10); //Lectura de pin 10.
+    if(Valorleido==0){//Condicional (Si pin 10 es 0 realizar la rutina a continuacion)
+      digitalWrite(13, HIGH);  //Asigna 1 al pin 13 en funcion del estado 0 sobre el pin 10.
+      
+    }else{
+      
+       digitalWrite(13, LOW);  //Asigna 0 al pin 13 en funcion del estado 0 sobre el pin 10.
+    }
+
+}
