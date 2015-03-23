@@ -1,0 +1,19 @@
+//Programa de configuración inicial de arduino Parpadeo LED
+
+
+
+void setup() { //Configura tus pines I/O inicialmente en esta funcion
+  
+    pinMode(13,OUTPUT); //Pinmode configura el pin en modo entrada o salida, para este caso le pin seleccionado de la \
+   //tarjeta es el numero 13 y se configura de salida.  
+
+}
+
+void loop() {
+  //Esta funcion repite el codigo que coloques en esta seccion, es equivalente a un bucle infinido en microcontroladores (while(1))
+  digitalWrite(13, HIGH); //Coloca el pin 13 en 1 (Encendido)
+  delay(100); //Delay de 1000ms o 1 segundo.
+  digitalWrite(13,LOW); //Coloca el pin 13 en 0 apagado.
+  delay(100); //Otro retraso de 1 segundo
+
+}
