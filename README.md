@@ -6,5 +6,5 @@ Este codigo es desarrollado para la conferencia de la universidad Minuto de Dios
 
 # Creditos
 
-Los codigos y el tutorial es desarrollado por el departamento de Tecnologia en electrónica de la Universidad Minuto de Dios
+Los codigos y el tutorial es desarrollado por el departamento de Tecnologia en electrónica de la Universidad Minuto de Dios.
 
