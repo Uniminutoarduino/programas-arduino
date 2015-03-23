@@ -1,0 +1,20 @@
+#include <LiquidCrystal.h> //Incluye la libreria del dispositivo que estas usando en este caso un LCD
+
+
+void setup() {
+  LiquidCrystal lcd(2,3,4,5,6,7); //Configura tu LCD, los pines de conexion son los siguientes
+  
+  //Pin RS de LCD conectado a pin 2 de tarjeta arduino.
+  //Pin EN de LCD conectado a pin 3 de tarjeta arduino.
+  //Pines de datos de LCD D4-D7 conectados en los pines 4-7 de la tarjeta arduino respectivamente.
+  lcd.begin(16,2); //Inicializa el LCD en este caso 16 columnas 2 lineas
+  lcd.print("Como estas? "); //Envia la frase que deseas representar sobre el lcd
+  lcd.setCursor(0,1); //Posicionas el cursor en la segunda linea para escribir sobre esta. 0 indica la columna, 1 la segunda linea
+  lcd.print("bien o no?");
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+}
