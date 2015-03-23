@@ -1,0 +1,42 @@
+#include <DHT.h> //Incluir libreria de sensor DHT11, la libreria la puedes descargar del sitio web que esta en la descripcion del tutorial
+
+#include <LiquidCrystal.h> //Libreria de manejo de LCD
+
+LiquidCrystal lcd(2,3,4,5,6,7); //Configuracion de pines de LCD
+
+//Pin RS de LCD conectado a pin 2 de tarjeta arduino
+//Pin En de LCD conectado a pin 3 de tarjeta arduino
+//Pin D4 de LCD conectado a pin 4 de tarjeta arduino
+//Pin D5 de LCD conectado a pin 5 de tarjeta arduino
+//Pin D6 de LCD conectado a pin 6 de tarjeta arduino
+//Pin D7 de LCD conectado a pin 7 de tarjeta arduino
+
+#define PINDHT 22 //Pin de DHT datos, conectado a pin 22 de tarjeta arduino.
+#define Tipo DHT11 // Tipo de sensor DHT tambien la libreria aplica a sensor DHT22
+
+DHT sensordht(PINDHT,Tipo); //Configuracion inicial de sensor DHT
+
+
+void setup() {
+  lcd.begin(16,2); //Inicializacion de LCD 16 columnas, dos filas.
+  sensordht.begin();// Inicializacion de sensor DHT11
+  lcd.print("Hum: "); //Imprimir sobre LCD.
+
+}
+
+void loop() {
+  
+  float humedad= sensordht.readHumidity(); //Lectura de humedad sobre sensor DHT11
+  float temperatura= sensordht.readTemperature(); //Lectura de temperatura.
+  lcd.setCursor(0,0); //Colocar cursor en la primera columna, primera fila
+  lcd.print("Hum :"); //Imprimir humedad
+  lcd.setCursor(6,0); //Colocar cursor en la posicion 6
+  lcd.print(humedad); //Imprimir valor de humedad
+  lcd.print("%");//Colocar simbolo de porciento
+  lcd.setCursor(0,1); //Colocar cursor en la primera columna, segunda fila
+  lcd.print("Temp :"); //Imprimir humedad
+  lcd.setCursor(6,1); //Colocar cursor en la posicion 6 segunda fila.
+  lcd.print(temperatura); //Imprimir valor de humedad
+  lcd.print("C");// Colocar simbolo de temperatura.
+
+}
